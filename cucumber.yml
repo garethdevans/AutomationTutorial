@@ -1,0 +1,1 @@
+default: --format pretty -v -r config/config_common.rb -r config/config_dev.rb -r features
