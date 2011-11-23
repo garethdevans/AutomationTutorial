@@ -1,17 +1,23 @@
 Given /^I am using google$/ do
-  google_search_page.open
+  @search_page = google_search_page
+  @search_page.open
+end
+
+Given /^I am using bing$/ do
+  @search_page = bing_search_page
+  @search_page.open
 end
 
 When /^I search for '(.*)'$/ do |text|
-  google_search_page.set_search(text)
-  google_search_page.click_search_button
+  @search_page.set_search(text)
+  @search_page.click_search_button
 end
 
 Then /^the top result should be '(.*)'$/ do |text|
-  google_search_page.top_result_contains(text)
+  @search_page.top_result_contains(text)
 end
 
 Then /^the results include the text '(.*)'$/ do |text|
-  pending "You need to find the appropriate method on google_search_page"
+  @search_page.should_contain?(text)
 end
 

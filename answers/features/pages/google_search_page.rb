@@ -18,7 +18,7 @@ class GoogleSearchPage
 
   def wait_for_div(id)
     i = 0
-    while !@browser.div(:id => "ires").exists? do
+    while !@browser.div(:id => id).exists? do
       raise 'Can not locate element' if i >= 10
       i = i + 1
       sleep 1
@@ -31,7 +31,7 @@ class GoogleSearchPage
   end
 
   def should_contain?(text)
-    wait_for_div('results')
+    wait_for_div('ires')
     found = @browser.text.include? text
     found.should == true
   end
