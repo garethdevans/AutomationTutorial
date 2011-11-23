@@ -1,7 +1,5 @@
 Feature:
-  As a potential Assurity customer
-  I want to be able to search for Assurity
-  So that I can find company information, Agile services and location
+Potential Assurity customers need to be able to find company information, services and address details when searching on the internet
 
 Scenario:
   Given I am using google
@@ -10,8 +8,7 @@ Scenario:
 
 Scenario:
   Given I am using google
-  When I search for 'Assurity'
-  Then the results include the text 'Agile'
-
+  When I search for 'testing software new zealand'
+  Then the results include the text 'Assurity'
 
 
