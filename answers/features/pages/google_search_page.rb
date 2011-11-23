@@ -1,12 +1,6 @@
-class GoogleSearchPage
-  def initialize (browser, site)
-    @browser = browser
-    @site = site
-  end
+require File.join(File.dirname(__FILE__), 'search_page')
 
-  def open
-    @browser.goto(@site)
-  end
+class GoogleSearchPage < SearchPage
 
   def set_search(text)
     @browser.text_field(:name, /q/).set(text)
@@ -14,15 +8,6 @@ class GoogleSearchPage
 
   def click_search_button
     @browser.button(:name, /btnG/).click
-  end
-
-  def wait_for_div(id)
-    i = 0
-    while !@browser.div(:id => id).exists? do
-      raise 'Can not locate element' if i >= 10
-      i = i + 1
-      sleep 1
-    end
   end
 
   def top_result_contains(text)

@@ -8,7 +8,7 @@ Scenario:
 
 Scenario:
   Given I am using google
-  When I search for 'testing software new zealand'
+  When I search for 'test agile new zealand'
   Then the results include the text 'Assurity'
 
 

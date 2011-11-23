@@ -1,0 +1,4 @@
+class BingSearchPage
+
+end
+
