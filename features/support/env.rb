@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'watir-webdriver'
-require 'spec'
+require 'rspec'
 
 browser = Watir::Browser.new(:firefox)
 
