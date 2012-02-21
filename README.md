@@ -1,5 +1,7 @@
 This proof of concept demonstrates using cucumber and concordion to do searches.
 
+Tested on Mozilla 10 (Mac)
+
 Cucumber
 ========
 
