@@ -1,10 +1,13 @@
-This proof of concept demonstrates using cucumber to do searches.
+This proof of concept demonstrates using cucumber and concordion to do searches.
+
+Cucumber
+========
 
 Also, you may want to look at [this tutorial](http://watir.com/2011/01/22/simple-cucumber-watir-page-object-pattern-framework/)
 and [this blog series](http://www.cheezyworld.com/2010/12/16/ui-tests-putting-it-all-together/)
 
 Installation
-============
+------------
 
 This code is written in ruby and tested on 1.8.7
 
@@ -37,7 +40,7 @@ You will also require the installation of the following GEMS via the commands:
     watir-webdriver (0.5.3)
 
 Test using Rake
-===============
+---------------
 
   Ensure that you have rake installed and then to see the tests available, from the root directory run rake with the option to show tasks
 
@@ -47,7 +50,7 @@ Test using Rake
     rake prod     # Run Cucumber features
 
 Sample run
-===========
+----------
 
     $ rake
     
@@ -83,4 +86,96 @@ Sample run
     6 steps (1 pending, 5 passed)
     0m8.368s
 
+Concordion
+==========
 
+Installation
+------------
+
+This code was written using Eclipse, java and gradle
+
+1. Ensure Eclipse is installed
+2. Download [gradle](http://gradle.org/) and add to bin folder to your path (eg export PATH=/usr/local/gradle/bin:$PATH in ~/.profile)
+
+3. Test gradle installation
+
+		$ gradle tasks
+		The reportsDir property has been deprecated and will be removed in the next version of Gradle. Please use the reporting.baseDir property instead.
+		:tasks
+
+		------------------------------------------------------------
+		All tasks runnable from root project
+		------------------------------------------------------------
+
+		Build tasks
+		-----------
+		assemble - Assembles all Jar, War, Zip, and Tar archives.
+		build - Assembles and tests this project.
+		buildDependents - Assembles and tests this project and all projects that depend on it.
+		buildNeeded - Assembles and tests this project and all projects it depends on.
+		classes - Assembles the main classes.
+		clean - Deletes the build directory.
+		jar - Assembles a jar archive containing the main classes.
+		testClasses - Assembles the test classes.
+
+		Documentation tasks
+		-------------------
+		groovydoc - Generates Groovydoc API documentation for the main source code.
+		javadoc - Generates Javadoc API documentation for the main source code.
+
+		Help tasks
+		----------
+		dependencies - Displays the dependencies of root project 'concordion'.
+		help - Displays a help message
+		projects - Displays the sub-projects of root project 'concordion'.
+		properties - Displays the properties of root project 'concordion'.
+		tasks - Displays the tasks runnable from root project 'concordion' (some of the displayed tasks may belong to subprojects).
+
+		IDE tasks
+		---------
+		cleanEclipse - Cleans all Eclipse files.
+		eclipse - Generates all Eclipse files.
+
+		Verification tasks
+		------------------
+		check - Runs all checks.
+		test - Runs the unit tests.
+
+		Rules
+		-----
+		Pattern: build<ConfigurationName>: Assembles the artifacts of a configuration.
+		Pattern: upload<ConfigurationName>: Assembles and uploads the artifacts belonging to a configuration.
+		Pattern: clean<TaskName>: Cleans the output files of a task.
+
+		To see all tasks and more detail, run with --all.
+
+		BUILD SUCCESSFUL
+
+		Total time: 5.658 secs
+
+
+4. From the root of the project, prepare for loading in Eclipse.
+
+		$ cd concordion/
+		concordion$ gradle eclipse
+		$ gradle eclipse
+		The reportsDir property has been deprecated and will be removed in the next version of Gradle. Please use the reporting.baseDir property instead.
+		:eclipseClasspath
+		:eclipseJdt
+		:eclipseProject
+		:eclipse
+
+		BUILD SUCCESSFUL
+
+		Total time: 9.625 secs
+
+5. Load into Eclipse workspace:
+
+		Import > Existing Projects into Workspace > Select root directory > Finish
+
+Sample run
+----------
+
+Run tests from Eclipse
+
+		Run as JUnit Tests
