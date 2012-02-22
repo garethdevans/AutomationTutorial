@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 import base.DriverFixture;
 
 @RunWith(ConcordionRunner.class)
-public class AssuritySearch extends DriverFixture {
+public class AssuritySearchTest extends DriverFixture {
 	
  	private WebDriver driver = getDriver();
 

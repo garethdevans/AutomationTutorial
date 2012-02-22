@@ -1,6 +1,6 @@
 This proof of concept demonstrates using cucumber and concordion to do searches.
 
-Tested on Mozilla 10 (Mac)
+Tested on Mozilla 10 (OS X) (Note: concondion/webdriver has been known not to work on Mozilla 11 OS X)
 
 Cucumber
 ========
@@ -181,3 +181,23 @@ Sample run
 Run tests from Eclipse
 
 		Run as JUnit Tests
+
+Run tests from gradle (commandline)
+
+		$ gradle test
+
+		:compileJava UP-TO-DATE
+		:compileGroovy UP-TO-DATE
+		:processResources UP-TO-DATE
+		:classes UP-TO-DATE
+		:compileTestJava UP-TO-DATE
+		:compileTestGroovy UP-TO-DATE
+		:processTestResources UP-TO-DATE
+		:testClasses UP-TO-DATE
+		:test
+
+		BUILD SUCCESSFUL
+
+		Total time: 1 mins 43.695 secs
+
+
