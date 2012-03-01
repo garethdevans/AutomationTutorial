@@ -1,6 +1,11 @@
-This proof of concept demonstrates using cucumber, concordion and FitLibraryWeb to do searches.
+This proof of concept demonstrates using acceptance test frameworks to do web searches so that one can see different the different/similar implementations of layering:
 
-Tested on Mozilla 10 (OS X) (Note: concondion/webdriver has been known not to work on Mozilla 11 OS X)
+ - cucumber 
+ - concordion
+ - concordion.net
+ - FitLibraryWeb 
+
+Tested on Mozilla 10 (OS X) (Note: concondion/webdriver has been known not to work on Mozilla 11 OS X) and Win 7 (for .net implementation)
 
 Cucumber
 ========
