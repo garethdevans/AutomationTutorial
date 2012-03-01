@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\lib\WebDriver\Castle.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Concordion, Version=0.5.44.78, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\Gallio-Concordion-Adapter\Concordion.dll</HintPath>
@@ -38,9 +41,18 @@
     <Reference Include="Gallio.ConcordionAdapter">
       <HintPath>..\..\lib\Gallio-Concordion-Adapter\Gallio.ConcordionAdapter.dll</HintPath>
     </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\lib\WebDriver\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\lib\WebDriver\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="OGNL, Version=1.0.3396.12987, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\Gallio-Concordion-Adapter\OGNL.dll</HintPath>
+    </Reference>
+    <Reference Include="Selenium.WebDriverBackedSelenium">
+      <HintPath>..\..\lib\WebDriver\Selenium.WebDriverBackedSelenium.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,10 +61,22 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.Selenium.Core">
+      <HintPath>..\..\lib\WebDriver\ThoughtWorks.Selenium.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver">
+      <HintPath>..\..\lib\WebDriver\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\..\lib\WebDriver\WebDriver.Support.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Google\AssuritySearchTest.cs" />
+    <Compile Include="Google\DriverFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provider\GoogleResultsPage.cs" />
+    <Compile Include="Provider\GoogleSearchPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Google\AssuritySearch.html">
