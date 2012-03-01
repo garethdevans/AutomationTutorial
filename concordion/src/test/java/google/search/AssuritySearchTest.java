@@ -11,12 +11,12 @@ import base.DriverFixture;
 
 @RunWith(ConcordionRunner.class)
 public class AssuritySearchTest extends DriverFixture {
-	
- 	private WebDriver driver = getDriver();
+  
+  private WebDriver driver = getDriver();
 
     public String resultFor(String searchProvider, String keywords) {
         GoogleSearchPage searchPage = new GoogleSearchPage(driver); 
-		GoogleResultsPage resultsPage = searchPage.searchFor(keywords);
+        GoogleResultsPage resultsPage = searchPage.searchFor(keywords);
         return resultsPage.getResult();
     }
 }

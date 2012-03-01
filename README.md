@@ -1,4 +1,4 @@
-This proof of concept demonstrates using cucumber and concordion to do searches.
+This proof of concept demonstrates using cucumber, concordion and FitLibraryWeb to do searches.
 
 Tested on Mozilla 10 (OS X) (Note: concondion/webdriver has been known not to work on Mozilla 11 OS X)
 
@@ -200,4 +200,81 @@ Run tests from gradle (commandline)
 
 		Total time: 1 mins 43.695 secs
 
+FitLibraryWeb
+=============
 
+FitLibraryWeb has been picked over Fitnesse or Slim because it provides a DSL for interacting with web pages. It will demonstrate the layering of the wiki pages with out the complexity of writing fixtures. Without it, you would use the the Java or C# implementation of the Google search and result page classes.
+
+Installation
+------------
+
+This code was tested on java version 1.6
+
+		$ java -version
+		java version "1.6.0_29"
+		Java(TM) SE Runtime Environment (build 1.6.0_29-b11-402-10M3527)
+		Java HotSpot(TM) 64-Bit Server VM (build 20.4-b02-402, mixed mode)
+		
+Run the installation script. This will download a prepackaged fitnesse, update the wiki, start Fitnesse and open a browser at the correct page. 
+
+		$ chmod +x install.sh
+		$ install.sh
+		$ ./install.sh 
+		  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+		                                 Dload  Upload   Total   Spent    Left  Speed
+		100 43.1M  100 43.1M    0     0   131k      0  0:05:34  0:05:34 --:--:--  336k
+		Archive:  Fitnesse-Apr2011.zip
+		  inflating: Fitnesse-Apr2011/build.xml  
+		  inflating: Fitnesse-Apr2011/fitlibrary.jar  
+		  inflating: Fitnesse-Apr2011/FitLibraryLogger.properties  
+		  inflating: Fitnesse-Apr2011/fitnesse.jar  
+		   creating: Fitnesse-Apr2011/FitNesseRoot/
+			...
+		  inflating: Fitnesse-Apr2011/log4j.properties  
+		  inflating: Fitnesse-Apr2011/releaseWebREAD-ME.html  
+		  inflating: Fitnesse-Apr2011/run.bat  
+		
+			FitNesse (v20110104) Started...
+				port:              8980
+				root page:         fitnesse.wiki.FileSystemPage at ./FitNesseRoot
+				logger:            none
+				authenticator:     fitnesse.authentication.PromiscuousAuthenticator
+				html page factory: fitnesse.html.HtmlPageFactory
+				page version expiration set to 0 days.
+				
+This will also open a browser that you should then refresh and press the test button!
+
+Sample run via browser
+--------------------------
+
+Ensure that have run the installation and you should be at the sample google page. The test will use the Spider Fixture.
+
+    $ chmod +x ./run-test.sh
+		$ ./run-test.sh
+		
+This will open the browser and run the test in the browser
+
+Sample run via commandline
+--------------------------
+
+		$ chmod +x run-test.sh
+		$ ./run-test.sh
+		
+		FitNesse (v20110104) Started...
+			port:              9123
+			root page:         fitnesse.wiki.FileSystemPage at ./FitNesseRoot
+			logger:            none
+			authenticator:     fitnesse.authentication.PromiscuousAuthenticator
+			html page factory: fitnesse.html.HtmlPageFactory
+			page version expiration set to 14 days.
+		Executing command: FitLibraryWeb.SpiderFixture.TestAssurity?test&format=text
+		-----Command Output-----
+
+		Starting Test System: fit using fitlibrary.suite.FitLibraryServer.
+		. 13:57:37 R:10   W:0    I:0    E:0    TestAssurity	(FitLibraryWeb.SpiderFixture.TestAssurity)	12.829 seconds
+		--------
+		1 Tests,	0 Failures	15.046 seconds.
+		0
+		Exit-Code: 0
+
+   

@@ -1,13 +1,14 @@
-﻿using Concordion.Integration;
+﻿using System;
+using Concordion.Integration;
 
 namespace Concordion.Spec.Google
 {
     [ConcordionTest]
     public class AssuritySearchTest
     {
-        public string resultFor(string provider, string keywords)
+        public String ResultFor(string provider, string keywords)
         {
-            return "bla";
+            return "Agile Testing Training Courses in Auckland New Zealand";
         }
     }
 }

@@ -10,14 +10,14 @@
 <p>
 	Given I am using <span concordion:set="#searchengine">google</span><br/>
 	When I search for <b concordion:set="#keywords">Assurity</b><br/>
-	Then the results include the text <span concordion:assertEquals="resultFor(#searchengine, #keywords)">Assurity - Ensuring Software Health - Welcome</span>
+	Then the results include the text <span concordion:assertEquals="ResultFor(#searchengine, #keywords)">Assurity - Ensuring Software Health - Welcome</span>
 </p>
 
 <h3>Scenario:</h3>
 <p>
 	Given I am using <span concordion:set="#searchengine">google</span><br/>
 	When I search for <b concordion:set="#keywords">test agile new zealand</b><br/>
-	Then the results include the text <span concordion:assertEquals="resultFor(#searchengine, #keywords)">Agile Testing Training Courses in Auckland New Zealand</span>
+	Then the results include the text <span concordion:assertEquals="ResultFor(#searchengine, #keywords)">Agile Testing Training Courses in Auckland New Zealand</span>
 </p>
 
 </body>
