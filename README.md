@@ -8,6 +8,8 @@ Cucumber
 Also, you may want to look at [this tutorial](http://watir.com/2011/01/22/simple-cucumber-watir-page-object-pattern-framework/)
 and [this blog series](http://www.cheezyworld.com/2010/12/16/ui-tests-putting-it-all-together/)
 
+Ensure that you are in the cucumber/ folder.
+
 Installation
 ------------
 
@@ -46,7 +48,7 @@ Test using Rake
 
   Ensure that you have rake installed and then to see the tests available, from the root directory run rake with the option to show tasks
 
-    $ rake -T
+    cucumber $ rake -T
     
     rake default  # Run Cucumber features
     rake prod     # Run Cucumber features
@@ -54,7 +56,7 @@ Test using Rake
 Sample run
 ----------
 
-    $ rake
+    cucumber $ rake
     
     (in /Users/todd/Documents/src/AutomationTutorial)
     /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -I "/Library/Ruby/Gems/1.8/gems/cucumber-1.1.8/lib:lib" "/Library/Ruby/Gems/1.8/gems/cucumber-1.1.8/bin/cucumber"  --profile default
@@ -91,6 +93,8 @@ Sample run
 Concordion
 ==========
 
+Ensure that you are in the concordion/ folder.
+
 Installation
 ------------
 
@@ -101,7 +105,7 @@ This code was written using Eclipse, java and gradle
 
 3. Test gradle installation
 
-		$ gradle tasks
+		concordion $ gradle tasks
 		The reportsDir property has been deprecated and will be removed in the next version of Gradle. Please use the reporting.baseDir property instead.
 		:tasks
 
@@ -159,7 +163,7 @@ This code was written using Eclipse, java and gradle
 4. From the root of the project, prepare for loading in Eclipse.
 
 		$ cd concordion/
-		concordion$ gradle eclipse
+		concordion $ gradle eclipse
 		$ gradle eclipse
 		The reportsDir property has been deprecated and will be removed in the next version of Gradle. Please use the reporting.baseDir property instead.
 		:eclipseClasspath
@@ -184,7 +188,7 @@ Run tests from Eclipse
 
 Run tests from gradle (commandline)
 
-		$ gradle test
+		concordion $ gradle test
 
 		:compileJava UP-TO-DATE
 		:compileGroovy UP-TO-DATE
@@ -200,10 +204,87 @@ Run tests from gradle (commandline)
 
 		Total time: 1 mins 43.695 secs
 
+Concordion.net
+==============
+
+Ensure that you are in the concordion.net/ folder (and running in .net)
+
+Installation
+------------
+
+Ensure that you have Visual Studio with .Net 4 installed
+
+Sample Run
+----------
+
+Run from commandline or from GUI.
+
+		> run-spec-with-echo.cmd
+		
+		Microsoft (R) Build Engine Version 4.0.30319.1
+		[Microsoft .NET Framework, Version 4.0.30319.1]
+		Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+		Build started 1/03/2012 9:33:29 p.m..
+		Project "Z:\Documents\src\AutomationTutorial\concordion.net\Concordion.sln" on
+		node 1 (default targets).
+		ValidateSolutionConfiguration:
+		  Building solution configuration "Debug|Any CPU".
+		Project "Z:\Documents\src\AutomationTutorial\concordion.net\Concordion.sln" (1)
+		 is building "Z:\Documents\src\AutomationTutorial\concordion.net\src\concordion
+		.spec\Concordion.Spec.csproj" (2) on node 1 (default targets).
+		GenerateTargetFrameworkMonikerAttribute:
+		Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output fi
+		les are up-to-date with respect to the input files.
+		CoreCompile:
+		Skipping target "CoreCompile" because all output files are up-to-date with resp
+		ect to the input files.
+		_CopyOutOfDateSourceItemsToOutputDirectory:
+		Skipping target "_CopyOutOfDateSourceItemsToOutputDirectory" because all output
+		 files are up-to-date with respect to the input files.
+		_CopyOutOfDateSourceItemsToOutputDirectoryAlways:
+		  Copying file from "Z:\Documents\src\AutomationTutorial\concordion.net\src\con
+		  cordion.spec\Google\AssuritySearch.html" to "bin\Debug\Google\AssuritySearch.
+		  html".
+		CopyFilesToOutputDirectory:
+		  Concordion.Spec -> Z:\Documents\src\AutomationTutorial\concordion.net\src\con
+		  cordion.spec\bin\Debug\Concordion.Spec.dll
+		Done Building Project "Z:\Documents\src\AutomationTutorial\concordion.net\src\c
+		oncordion.spec\Concordion.Spec.csproj" (default targets).
+
+		Done Building Project "Z:\Documents\src\AutomationTutorial\concordion.net\Conco
+		rdion.sln" (default targets).
+
+
+		Build succeeded.
+		    0 Warning(s)
+		    0 Error(s)
+		
+		Time Elapsed 00:00:00.48
+		!!! You must have Gallio installed and have Gallio.Echo.exe in the PATH to run t
+		his batch file !!!
+		
+		Gallio Echo - Version 3.2 build 744
+		Get the latest version at http://www.gallio.org/
+		
+		Start time: 9:31 p.m.
+		Initializing the runtime and loading plugins.
+		Verifying test files.
+		Initializing the test runner.
+		Running the tests.
+		[failed] Fixture Concordion.Spec/AssuritySearchTest
+		Disposing the test runner.
+		Stop time: 9:31 p.m. (Total execution time: 23.486 seconds)
+
+		1 run, 0 passed, 1 failed, 0 inconclusive, 0 skipped
+		
+
 FitLibraryWeb
 =============
 
 FitLibraryWeb has been picked over Fitnesse or Slim because it provides a DSL for interacting with web pages. It will demonstrate the layering of the wiki pages with out the complexity of writing fixtures. Without it, you would use the the Java or C# implementation of the Google search and result page classes.
+
+Ensure that you are in the fitlibraryweb/ folder.
 
 Installation
 ------------
@@ -217,8 +298,8 @@ This code was tested on java version 1.6
 		
 Run the installation script. This will download a prepackaged fitnesse, update the wiki, start Fitnesse and open a browser at the correct page. 
 
-		$ chmod +x install.sh
-		$ install.sh
+		fitlibraryweb $ chmod +x install.sh
+		fitlibraryweb $ install.sh
 		$ ./install.sh 
 		  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
 		                                 Dload  Upload   Total   Spent    Left  Speed
@@ -249,16 +330,16 @@ Sample run via browser
 
 Ensure that have run the installation and you should be at the sample google page. The test will use the Spider Fixture.
 
-    $ chmod +x ./run-test.sh
-		$ ./run-test.sh
+    fitlibraryweb $ chmod +x ./run-test.sh
+		fitlibraryweb $ ./run-test.sh
 		
 This will open the browser and run the test in the browser
 
 Sample run via commandline
 --------------------------
 
-		$ chmod +x run-test.sh
-		$ ./run-test.sh
+		fitlibraryweb $ chmod +x run-test.sh
+		fitlibraryweb $ ./run-test.sh
 		
 		FitNesse (v20110104) Started...
 			port:              9123
