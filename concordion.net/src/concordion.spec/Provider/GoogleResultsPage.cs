@@ -15,7 +15,7 @@ namespace Concordion.Spec.Provider
         private readonly By _results = By.Id("res");
         private readonly By _headings = By.Id("s");
         private readonly By _footer = By.Id("foot");
-        private readonly By _links = By.Id("r");
+        private readonly By _links = By.ClassName("r");
 
         private readonly IWebDriver _webDriver;
  
@@ -38,7 +38,7 @@ namespace Concordion.Spec.Provider
 
         private void waitForFooter()
         {
-            var wait = new WebDriverWait(_webDriver, new TimeSpan(30));
+            var wait = new WebDriverWait(_webDriver, TimeSpan.FromSeconds(30));
             wait.Until(ExpectedConditions.ElementIsVisible(_footer));
         }
     }
