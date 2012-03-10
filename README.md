@@ -217,7 +217,16 @@ Ensure that you are in the concordion.net/ folder (and running in .net)
 Installation
 ------------
 
-Ensure that you have Visual Studio with .Net 4 installed
+Ensure that you have [.NET Framework 4](http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=17851) installed,
+with either Visual Studio or [Microsoft Windows SDK for Windows 7 and .NET Framework 4](http://www.microsoft.com/download/en/details.aspx?displayLang=en&id=8279).
+
+You will also need to install the Gallio runner (from the tools folder of this package).
+
+The Concordion output location is set in the file src/concordion.spec/Concordion.Spec.Config, which must be copied to the target folder (eg. src/concordion.spec/bin/Debug/).
+(Note, this is manual at the moment - I haven't modified the build to do this).
+The format of this config file is documented at http://code.google.com/p/concordion-net/wiki/ConfigurationFile.
+
+You may also need to edit run-spec-with-echo.cmd to alter the location of Concordion.Spec.dll (eg. from Release to Debug).
 
 Sample Run
 ----------
@@ -283,6 +292,9 @@ Run from commandline or from GUI.
 
 		1 run, 0 passed, 1 failed, 0 inconclusive, 0 skipped
 		
+
+The Concordion specification output will be in the folder Spec-Output.
+	
 
 FitLibraryWeb
 =============
