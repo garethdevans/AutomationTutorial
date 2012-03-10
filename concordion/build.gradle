@@ -16,5 +16,6 @@ dependencies {
 
 test {
 	include '**/*Test.*'
-	systemProperties['concordion.output.dir'] = "$reporting.baseDir/spec"
+	//systemProperties['concordion.output.dir'] = "$reporting.baseDir/spec"
+	systemProperties['concordion.output.dir'] = "results"
 }

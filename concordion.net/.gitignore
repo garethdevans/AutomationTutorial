@@ -31,6 +31,8 @@ obj/
 [Dd]ebug*/
 [Rr]elease*/
 Ankh.NoLoad
+# Test results
+results/
 
 #Tooling
 _ReSharper*/

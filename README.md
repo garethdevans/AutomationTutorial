@@ -222,11 +222,7 @@ with either Visual Studio or [Microsoft Windows SDK for Windows 7 and .NET Frame
 
 You will also need to install the Gallio runner (from the tools folder of this package).
 
-The Concordion output location is set in the file src/concordion.spec/Concordion.Spec.Config, which must be copied to the target folder (eg. src/concordion.spec/bin/Debug/).
-(Note, this is manual at the moment - I haven't modified the build to do this).
-The format of this config file is documented at http://code.google.com/p/concordion-net/wiki/ConfigurationFile.
-
-You may also need to edit run-spec-with-echo.cmd to alter the location of Concordion.Spec.dll (eg. from Release to Debug).
+The Concordion output location is set in the file src/concordion.spec/Concordion.Spec.Config (currently set to /results director in the proj folder). The format of this config file is documented at http://code.google.com/p/concordion-net/wiki/ConfigurationFile.
 
 Sample Run
 ----------
@@ -243,7 +239,7 @@ Run from commandline or from GUI.
 		Project "Z:\Documents\src\AutomationTutorial\concordion.net\Concordion.sln" on
 		node 1 (default targets).
 		ValidateSolutionConfiguration:
-		  Building solution configuration "Debug|Any CPU".
+		  Building solution configuration "Release|Any CPU".
 		Project "Z:\Documents\src\AutomationTutorial\concordion.net\Concordion.sln" (1)
 		 is building "Z:\Documents\src\AutomationTutorial\concordion.net\src\concordion
 		.spec\Concordion.Spec.csproj" (2) on node 1 (default targets).
@@ -258,11 +254,11 @@ Run from commandline or from GUI.
 		 files are up-to-date with respect to the input files.
 		_CopyOutOfDateSourceItemsToOutputDirectoryAlways:
 		  Copying file from "Z:\Documents\src\AutomationTutorial\concordion.net\src\con
-		  cordion.spec\Google\AssuritySearch.html" to "bin\Debug\Google\AssuritySearch.
+		  cordion.spec\Google\AssuritySearch.html" to "bin\Release\Google\AssuritySearch.
 		  html".
 		CopyFilesToOutputDirectory:
 		  Concordion.Spec -> Z:\Documents\src\AutomationTutorial\concordion.net\src\con
-		  cordion.spec\bin\Debug\Concordion.Spec.dll
+		  cordion.spec\bin\Release\Concordion.Spec.dll
 		Done Building Project "Z:\Documents\src\AutomationTutorial\concordion.net\src\c
 		oncordion.spec\Concordion.Spec.csproj" (default targets).
 
@@ -293,7 +289,9 @@ Run from commandline or from GUI.
 		1 run, 0 passed, 1 failed, 0 inconclusive, 0 skipped
 		
 
-The Concordion specification output will be in the folder Spec-Output.
+The Concordion specification output will be in the folder results\Concordion\Spec\Google\AssuritySearchPage.html
+
+	start /results/
 	
 
 FitLibraryWeb
