@@ -13,7 +13,7 @@ at_exit do
   browser.close rescue nil
 end
 
-class AssurityWorld
+class SearchWorld
   
   public
   def google_search_page
@@ -21,13 +21,8 @@ class AssurityWorld
 	return @google_search_page
   end
   
-  def bing_search_page
-    @bing_search_page ||= BingSearchPage.new(@browser, $config["bing_search_page_location"])
-	return @bing_search_page
-  end
-  
 end
 
 World do
-  AssurityWorld.new
+  SearchWorld.new
 end
