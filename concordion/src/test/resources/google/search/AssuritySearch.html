@@ -1,0 +1,24 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<link href="../concordion.css" rel="stylesheet" type="text/css" />
+<body>
+
+<h1>Search results on Assurity</h1>
+	
+<p>Potential Assurity customers need to be able to find company information, services and address details when searching on the internet</p>
+
+<h3>Scenario:</h3>
+<p>
+	Given I am using <span concordion:set="#searchengine">google</span><br/>
+	When I search for <b concordion:set="#keywords">Assurity</b><br/>
+	Then the results include the text <span concordion:assertEquals="resultFor(#searchengine, #keywords)">Assurity - Ensuring Software Health - Welcome</span>
+</p>
+
+<h3>Scenario:</h3>
+<p>
+	Given I am using <span concordion:set="#searchengine">google</span><br/>
+	When I search for <b concordion:set="#keywords">test agile new zealand</b><br/>
+	Then the results include the text <span concordion:assertEquals="resultFor(#searchengine, #keywords)">Agile Testing Training Courses in Auckland New Zealand</span>
+</p>
+
+</body>
+</html>

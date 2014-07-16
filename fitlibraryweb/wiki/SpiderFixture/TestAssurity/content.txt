@@ -1,0 +1,19 @@
+|''with spider''|
+
+|''get url''|http://www.google.com|
+
+|''title''|'''is'''|Google|
+
+|''url''|'''is'''|http://www.google.co.nz/|
+
+|''page source''|'''contains'''|Search|
+
+|''with''|//input[@name="q"]|''set text''|Assurity|
+
+|''click''|//input[@name="btnG"]|
+
+|''title''|'''becomes'''|Assurity - Google Search|
+
+|''url''|'''contains'''|&q=Assurity|
+
+|''page source''|contains|Ensuring Software Health|
